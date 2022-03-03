@@ -32,7 +32,6 @@ router.route('/register')
 
 router.route('/login')
     .post(async (req, res ) => {
-        console.log('login')
 
         const {name, password } = req.body
         if (!name || !password) return res.status(400).json({'message': 'input required fields'})
